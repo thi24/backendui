@@ -3,7 +3,7 @@ version: '3'
 
 
 services:
-  opusirae:
+  backend_ui:
     image: ghcr.io/thi24/backendui:latest
     build:
       context: .
