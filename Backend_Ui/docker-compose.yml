@@ -3,7 +3,7 @@ version: '3'
 services:
 
   backend_ui:
-    image: ghcr.io/thi24/backendui:latest
+    image: ghcr.io/thi24/backend_ui:latest
     build:
       context: .
       dockerfile: Dockerfile
