@@ -28,7 +28,8 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v5
       with:
-        context: .
+        context: ./Backend_Ui
+        file: ./Backend_Ui/Dockerfile
         push: true
         tags: ghcr.io/thi24/backend_ui:latest
 
