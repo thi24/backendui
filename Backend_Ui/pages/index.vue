@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Login</h1>
+    <h1>Login V2</h1>
     <form @submit="login">
       <label for="username">Username:</label>
       <input type="text" id="username" v-model="username" required>
