@@ -1,12 +1,21 @@
 version: '3'
 
-
-
 services:
+  app:
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    ports:
+      - '80:80'  
+      - '443:443'  
+      - '81:81'  
+    volumes:
+      - ./data:/data
+      - ./letsencrypt:/etc/letsencrypt
+
   backend_ui:
-    image: ghcr.io/thi24/backend_ui:latest
+    image: ghcr.io/thi24/backendui:latest
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Backend_Ui/Dockerfile
     ports:
       - "8080:3000"
