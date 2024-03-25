@@ -16,6 +16,6 @@ services:
     image: ghcr.io/thi24/backendui:latest
     build:
       context: .
-      dockerfile: Backend_Ui/Dockerfile
+      dockerfile: Dockerfile
     ports:
       - "8080:3000"
