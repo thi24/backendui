@@ -11,6 +11,7 @@ RUN apt-get install -y git
 # copy the app, note .dockerignore
 COPY . /usr/src/nuxt-app/
 RUN npm install
+RUN npm i @nuxtjs/auth-next
 RUN npm run build
 
 EXPOSE 3000
